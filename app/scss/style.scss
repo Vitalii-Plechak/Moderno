@@ -1,9 +1,70 @@
-html{
-  box-sizing: border-box;
-}
-*,
-*::before, 
-*::after{
-  box-sizing: inherit;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 91px;
+  align-items: center;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
 }
 
+.header__text {
+  margin-left: auto;
+  margin-right: 50px;
+  color: $text;
+
+  span {
+    color: $red;
+  }
+}
+
+.header__box {
+
+}
+
+.header__btn {
+  padding: 4px;
+  width: 72px;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.header__login {
+  background-color: $green;
+}
+
+.header__register {
+  background-color: $red;
+  margin-left: 7px;
+}
+
+
+.header__menu {
+  background-color: $main;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+}
+
+.menu__list {
+  li {
+    display: inline-block;
+
+    &+li {
+      margin-left: 30px;
+    }
+  }
+  a{
+    color: #fff;
+  }
+}
