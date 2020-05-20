@@ -11,7 +11,9 @@
   font-size: 15px;
   line-height: 24px;
 }
-
+.header__logo{
+  margin: auto 0;
+}
 .header__text {
   margin-left: auto;
   margin-right: 50px;
@@ -20,10 +22,6 @@
   span {
     color: $red;
   }
-}
-
-.header__box {
-
 }
 
 .header__btn {
