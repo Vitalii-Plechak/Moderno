@@ -201,14 +201,21 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
+      display: inline-block;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      display: inline-block;
       margin-right: 14px;
     }
     span{
       font-size: 14px;
+      max-width: 230px;
+    }
+  }
+  &-star{
+    font-size: 12px;
+    span{
+      color:$description;
     }
   }
 }
@@ -233,3 +240,39 @@
 }
 
 // end products section
+
+// start product slider
+
+.product__slider{
+  padding: 110px 0 120px;
+  .slick-track{
+    
+  }
+  .slick-dots{
+    text-align: center;
+    margin-top: 50px;
+    li{
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+      button{
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        box-shadow: inset 0px 1px 1px 0px rgba(177, 177, 177, 1);
+        border: none;
+        font-size: 0;
+        height: 16px;
+        width: 16px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+    .slick-active button{
+      background-color: $green;
+    }
+  }
+}
+
+
+
+// end product slider
