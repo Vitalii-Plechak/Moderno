@@ -20,7 +20,6 @@
   margin-left: auto;
   margin-right: 50px;
   color: $text;
-
   span {
     color: $red;
   }
@@ -51,7 +50,6 @@
 .menu__list {
   li {
     display: inline-block;
-
     &+li {
       margin-left: 30px;
     }
@@ -393,7 +391,35 @@
   }
 }
 
-
-
-
 // end author
+
+// start tutorial
+
+.tutorial{
+  padding: 60px 0 110px;
+}
+.tutorial__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.tutorial__item{
+  &-images{
+    width: 370px;
+    height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  &-text{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    min-height: 100px;
+    background-color: #f8f8f8;
+    padding: 25px 15px;
+  }
+}
+
+// end tutorial
