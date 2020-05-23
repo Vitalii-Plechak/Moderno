@@ -348,3 +348,52 @@
 }
 
 // end advantages
+
+// start author
+.author{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+  &__box{
+    max-width: 655px;
+    width: 100%;
+    height: 215px;
+    background-color: $green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    }
+  &__title{
+    font-size: 30px;
+    line-height: 36px;
+    color: #fff;
+    max-width: 270px;
+    span{
+      font-family: 'Roboto-Bold', sans-serif;
+      font-weight: 700;
+    }
+  }
+  &__link{
+    padding: 20px 40px;
+    background-color: #fff;
+    max-width: 230px;
+    p{
+      font-size: 18px;
+      line-height: 36px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+
+
+
+// end author
