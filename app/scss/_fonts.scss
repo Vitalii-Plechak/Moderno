@@ -52,6 +52,10 @@
     content: "\f069";
 }
 
+.icon-search:before {
+    content: "\f002";
+}
+
 .icon-envelope-o:before {
     content: "\f003";
 }
@@ -144,8 +148,28 @@
     content: "\f0dc";
 }
 
+.icon-sort-desc:before {
+    content: "\f0dd";
+}
+
+.icon-sort-down:before {
+    content: "\f0dd";
+}
+
+.icon-sort-asc:before {
+    content: "\f0de";
+}
+
+.icon-sort-up:before {
+    content: "\f0de";
+}
+
 .icon-linkedin:before {
     content: "\f0e1";
+}
+
+.icon-comment-o:before {
+    content: "\f0e5";
 }
 
 .icon-comments-o:before {
