@@ -851,7 +851,7 @@
   }
 }
 .footer__copy{
-  height: 75px;
+  min-height: 75px;
   border-top: 1px solid #424d53;
   padding: 19px 0;
   &-text{
@@ -1242,3 +1242,13 @@
 
 // end product-page
 
+
+
+
+
+
+
+
+
+
+@import 'media';

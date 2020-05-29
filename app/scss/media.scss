@@ -1,0 +1,66 @@
+@media (max-width: 1050px){
+  .footer__content-inner{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 80px 0 80px;
+  }
+  .footer__about{
+    min-width: 80%;
+    text-align: center;
+    &-title{
+      &::before{
+        width: 100%;
+      }
+    }
+    &-info{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      a{
+        margin: 20px 15px 0;
+      }
+      // flex-direction: column;
+    }
+
+  }
+  .footer-col{
+    margin: 20px;
+  }
+}
+@media (max-width: 860px){
+  .footer-col{
+    min-width: 80%;
+    text-align: center;
+  }
+  .footer-title {
+    &::before {
+      width: 100%;
+    }
+  }
+  .footer__join-list{
+    a{
+      margin-right: 23px;
+    }
+  }
+  .footer__help-list{
+    a{
+      margin-right: 23px;
+    }
+  }
+  .footer__follow-social{
+    ul{
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 640px){
+  .footer__about {
+    min-width: 90%;
+  }
+  .footer-col {
+    min-width: 90%;
+  }
+  .footer__content-inner{
+    padding: 50px 0 50px;
+  }
+}
