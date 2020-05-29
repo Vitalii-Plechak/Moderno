@@ -3,7 +3,9 @@
 @import 'fonts';
 
 // start header
-
+.header{
+  background-color: #fff;
+}
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -19,7 +21,7 @@
 }
 .header__text {
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: 10px;
   color: $text;
   span {
     color: $red;
@@ -213,6 +215,12 @@
     }
   }
 }
+.basket__box{
+  margin-right: 15px;
+}
+.user__images{
+  margin-left: 0;
+}
 .circle__menu {
   border: 0px solid #ccc;
   background-color: #fff;
@@ -337,6 +345,11 @@
 .icons-color::before{
   color: $tomato;
 }
+.header__btn-menu,
+.menu__btn{
+  display: none;
+}
+
 // end header
 
 // start search box
@@ -569,6 +582,7 @@
 // end product slider
 
 // start advantages
+
 .advantages{
   background-color: $main;
   color: $description;
@@ -627,13 +641,11 @@
     width: 50px;
   }
 }
-
 .icosvg-2{
   svg{
     width: 71px;
   }
 }
-
 .icosvg-3{
   svg{
     width: 85px;
@@ -869,6 +881,7 @@
 // start product-page 
 
 // star product page aside
+
 .product-page__inner{
   display: flex;
   padding-bottom: 110px;
@@ -1241,8 +1254,6 @@
 }
 
 // end product-page
-
-
 
 
 
