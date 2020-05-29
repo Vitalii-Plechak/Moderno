@@ -866,14 +866,24 @@
       &.active{
         background-color: $red;
         color: #fff;
+        cursor: default;
       }
     }
   }
 }
-
-
 .product-page__items{
   .product__item{
+    .product__item-star {
+      .rate-star__inner {
+        color: $description;
+      }
+      span {
+        font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: $main;
+      }
+    }
     &.list {
       max-width: 100%;
       .product__item-content{
@@ -920,37 +930,38 @@
       }
       .product__item-list{
         display: flex;
-        color: $main;
         .icon-comment-o{
           padding: 0 27px 0 50px;
           border-left: 2px solid #aeb4bb;
           position: relative;
-          color: $main;
+          color: $description;
           &::before{
             position: absolute;
             left: 20px;
             color: $green;
+          }
+          span{
+            color: $main;
           }
         }
         .icon-heart-o{
           padding-left: 50px;
           border-left: 2px solid #aeb4bb;
           position: relative;
+          color: $description;
           &::before {
             position: absolute;
             left: 20px;
             color: $green;
+          }
+          span {
+            color: $main;
           }
         }
       }
     }
   }
 }
-
-
-
-
-
 
 // end product-page
 
