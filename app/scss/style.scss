@@ -1757,24 +1757,11 @@
 // end product-one
 
 // start page 404
-.page-404,
-.about-us{
-  margin-bottom: 150px;
-  &__head{
-    background-color: #fff;
-    font-size: 24px;
-    color: $main;
-    height: 70px;
-    padding: 21px 30px;
-    border: 1px solid #dcdcdc;
-    border-bottom: none;
-  }
+.page-404{
   &__inner{
     text-align: center;
     background-color: $green;
     color: #fff;
-    padding-top: 50px;
-    padding-bottom: 100px;
     border: 1px solid #dcdcdc;
   }
   &__404{
@@ -1832,7 +1819,7 @@
     background-color: #fff;
     color: #707070;
     text-align: left;
-    padding: 50px 50px 35px 50px;
+    padding: 50px 50px 35px 50px !important;
   }
   &__title{
     color: $main;
@@ -1849,10 +1836,147 @@
     font-size: 15px;
     color: #707070;
     margin: 20px 0;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 // end about us
+
+// start contact us
+
+.contact-us{
+  &__wrapper{
+    background-color: #fff;
+  }
+  &__head{
+    border-bottom: 1px solid #dcdcdc !important;
+  }
+  &__images{
+    border: 1px solid #dcdcdc;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    padding-top: 33px;
+  }
+  &__inner{
+    border-top: none !important;
+    padding-bottom: 15px !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    max-width: 260px;
+    width: 100%;
+  }
+  &__info-box{
+    & + &{
+      margin-top: 35px; 
+    } 
+  }
+  &__title{
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 30px;
+    &::before{
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 24px;
+      color: $green;
+      left: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 4px;
+      background-color: $green;
+      left: 40px;
+      top: 42px;
+    }
+  }
+  &-location,
+  &-phone,
+  &-email{
+    margin-left: 41px; 
+  }
+  &__address::before{
+    content: "\f041";
+  }
+  &__phone::before{
+    content: "\f095";
+  }
+  &__email::before{
+    content: "\f003";
+  }
+}
+.contact-us__form{
+  max-width: 725px;
+  width: 100%;
+
+  &-title{
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  &-row{
+    input{
+      border: none;
+      max-width: 351px;
+      width: 100%;
+      height: 43px;
+      background-color: #f1f4f5;
+      padding: 15px 17px;
+      outline: none;
+      margin-bottom: 28px;
+      & + input{
+        margin-left: 18px;
+      }
+      &::placeholder{
+        color: #7a7a7a;
+      }
+    }
+  }
+  form{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: $main;
+    textarea{
+      background-color: #f1f4f5;
+      width: 100%;
+      height: 193px;
+      border: none;
+      outline: none;
+      resize: none;
+      padding: 16px 18px;
+    }
+    button{
+      margin-top: 22px;
+      border: none;
+      width: 190px;
+      color: #fff;
+      background-color: $green;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 15px 15px;
+      text-align: center;
+    }
+  }
+}
+
+// end contact us
+
+
+
+
+
+
 
 
 

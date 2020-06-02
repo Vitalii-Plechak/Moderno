@@ -140,3 +140,24 @@ body{
         font-size: 14px;
     }
 }
+
+.page-404,
+.about-us,
+.contact-us{
+    &__inner {
+        padding-top: 50px;
+        padding-bottom: 100px;
+        border: 1px solid #dcdcdc;
+        margin-bottom: 150px;
+    }
+    &__head {
+        background-color: #fff;
+        font-size: 24px;
+        color: $main;
+        height: 70px;
+        padding: 21px 30px;
+        border: 1px solid #dcdcdc;
+        border-bottom: none;
+    }
+    
+}
