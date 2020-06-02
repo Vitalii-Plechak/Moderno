@@ -352,6 +352,123 @@
 
 // end header
 
+// start modal
+
+#modal{
+  background-color: $green;
+  max-width: 730px;
+  width: 100%;
+  padding: 80px 50px 100px;
+}
+.login__title{
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.login__wrapper{
+  form{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    label{
+      position: relative;
+      &::before{
+        position: absolute;
+        font-family: 'icomoon';
+        left: 18px;
+        top: 14px;
+        font-size: 14px;
+        color: #fff;
+        z-index: 1;
+      }
+    }
+    .login__label-name{
+      &::before{
+        content: "\f007";
+      }
+    }
+    .login__label-password{
+      &::before{
+        content: "\f023";
+      }
+    }
+    input{
+      height: 43px;
+      border: none;
+      outline: none;
+      padding-left: 40px;
+      padding-right: 20px;
+      background-color: #76ae36;
+      color: #fff;
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      &::placeholder{
+        color: #fff;
+      }
+    }
+    button{
+      margin-top: 10px;
+      margin-right: 6px;
+      padding: 18px 16px;
+      background-color: #fff;
+      box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+      width: 140px;
+      text-transform: uppercase;
+      border: none;
+      font-family: 'Roboto-Bold', sans-serif;
+      font-weight: 700;
+      color: #000;
+      cursor: pointer;
+    }
+    a{
+      font-family: 'Roboto-Regular', sans-serif;
+      font-weight: 400;
+      color: #fff;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .create-acc{
+      padding: 16px 16px 16px 67px;
+      width: 250px;
+      background-color: #76ae36;
+      line-height: unset;
+      position: relative;
+      &::before{
+        content: "\f044";
+        font-family: 'icomoon';
+        position: absolute;
+        font-size: 18px;
+        left: 36px;
+      }
+    }
+    .lost-password{
+      display: inline-block;
+      margin-top: 20px
+    }
+  }
+}
+.fancybox-close-small{
+  svg{
+    display: none;
+  }
+  &::before{
+    content: "\f00d";
+    font-family: 'icomoon';
+    position: absolute;
+    color: #fff;
+    top: 11px;
+    right: 14px;
+    font-size: 18px;
+  }
+}
+
+// end modal
+
 // start search box
 
 .search{
@@ -1410,7 +1527,6 @@
   padding: 30px 30px 50px;
   max-height: 263px;
   height: 100%;
-  
 }
 .tab-item{
   display: none;
@@ -1427,7 +1543,6 @@
   li{
     max-width: 270px;
     width: 100%;
-
   }
 }
 .product-one__more-products{
@@ -1488,7 +1603,6 @@
     color: $red;
   }
 }
-
 .product-price{
   button{
     width: 208px;
@@ -1602,7 +1716,6 @@
     z-index: 1;
   }
 }
-
 .aside-item__sale{
   font-family: 'Roboto-Regular', sans-serif;
   font-weight: 400;
@@ -1641,10 +1754,105 @@
     color: #70838d;
   }
 }
+// end product-one
 
+// start page 404
+.page-404,
+.about-us{
+  margin-bottom: 150px;
+  &__head{
+    background-color: #fff;
+    font-size: 24px;
+    color: $main;
+    height: 70px;
+    padding: 21px 30px;
+    border: 1px solid #dcdcdc;
+    border-bottom: none;
+  }
+  &__inner{
+    text-align: center;
+    background-color: $green;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border: 1px solid #dcdcdc;
+  }
+  &__404{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 300px;
+    line-height: 300px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url(../images/page-404.png);
+      width: 157px;
+      height: 301px;
+      top: 0;
+      margin-left: 15px;
+    }
+  }
+  &__title{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  &__text{
+    width: 550px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+  }
+  &__link{
+    color: #fff;
+     font-family: 'Raleway', sans-serif;
+     font-weight: 700;
+     font-size: 14px;
+     line-height: 24px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     padding: 17px 32px;
+     border: 2px solid #fff;
+     border-radius: 4px;
+  }
+}
 
+// end page 404
 
+// start about us
 
+.about-us{
+  &__inner{
+    background-color: #fff;
+    color: #707070;
+    text-align: left;
+    padding: 50px 50px 35px 50px;
+  }
+  &__title{
+    color: $main;
+    letter-spacing: unset;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__text{
+    width: 100%;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #707070;
+    margin: 20px 0;
+  }
+}
+
+// end about us
 
 
 
