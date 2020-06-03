@@ -1976,6 +1976,115 @@
 
 // end contact us
 
+// start settings
+
+.product-one__tabs.settings__tabs{
+  display: flex;
+  justify-content: space-between;
+  background-color: unset;
+  .tabs{
+    max-width: 270px;
+    width: 100%;
+    border-bottom: none;
+    display: block;
+    text-align-last: left;
+    span{
+      display: block;
+      background-color: #fff;
+      padding: 14px 15px 14px 50px;
+      &::before{
+        left: 23px;
+        color: #444444;
+      }
+    }
+    .tab{
+      width: 270px;
+    }
+    .tab.active::before{
+      left: 0;
+    }
+    .tab.active::after{
+      content: "\f105";
+      font-family: 'icomoon';
+      position: absolute;
+      left: 23px;
+      color: $green;
+      font-size: 14px;
+    }
+    .tab{
+      & + .tab{
+        border-bottom: none;
+      }
+    }
+    .tab.active{
+      border-bottom: none;
+    }
+  }
+  .tab__content {
+    width: 100%;
+    max-width: 868px;
+    margin-left: 30px;
+    .tab-item__box {
+      background-color: #fff;
+      height: 100%;
+      &-content {
+        border: 1px solid #dedede;
+        padding: 35px 36px 80px 39px;
+      }
+    }
+  }
+  .settings__line {
+    margin-bottom: 21px;
+    display: flex;
+    align-items: center;
+    label {
+      width: 260px;
+      color: #444;
+    }
+    input {
+      max-width: 540px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      padding: 0 10px;
+      outline: none;
+      font-size: 14px;
+      color: #707070;
+    }
+    select {
+      max-width: 540px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      padding: 0 10px;
+      outline: none;
+      font-size: 14px;
+      color: #707070;
+    }
+  }
+  .settings__btn{
+    width: 100%;
+    padding-left: 250px;
+    button {
+      border: none;
+      padding: 15px;
+      text-align: center;
+      max-width: 108px;
+      width: 100%;
+      background-color: $green;
+      font-size: 15px;
+      font-family: 'Roboto-Medium', sans-serif;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+ 
+// end settings
 
 
 
