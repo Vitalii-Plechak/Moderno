@@ -56,6 +56,20 @@ $(function(){
         return false;
     });
 
+    $('input[type="file"], select').styler({
+        locale: 'en',
+            locales: {
+            'en': {
+                filePlaceholder: 'No File Choosen',
+                fileBrowse: 'Choose File',
+                fileNumber: 'Selected files: %s',
+                selectPlaceholder: 'Select...',
+                selectSearchNotFound: 'No matches found',
+                selectSearchPlaceholder: 'Search...'
+            }
+	    },
+    });
+
 
     var mixer = mixitup('.products__inner-box');
 
