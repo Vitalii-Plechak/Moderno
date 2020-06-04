@@ -2397,60 +2397,6 @@
   input[type=file]{
     padding: 8px 17px;
   }
-  .jq-selectbox {
-    width: 100%;
-    &__select{
-      height: 40px;
-      background-color: #f9f9f9;
-      border: 1px solid #dcdcdc;
-      padding: 4px 17px;
-      font-family: 'Roboto-Regular', sans-serif;
-      font-weight: 400;
-      font-size: 15px;
-      color: #707070;
-      box-shadow: none;
-      text-shadow: none;
-      border-radius: unset;
-      background: unset;
-      background-color: #f9f9f9;
-      &-text{
-        width: 95%;
-      }
-    }
-    li{
-      padding: 6px 15px 6px;
-      font-family: 'Roboto-Regular', sans-serif;
-      font-weight: 400;
-      font-size: 15px;
-      color: #444444;
-    }
-    li.selected{
-      color: #fff;
-    }
-  }
-  .jq-selectbox__trigger{
-    border-left: unset;
-    top: 3px;
-    &-arrow{
-      position: relative;
-      right: 0;
-      &::before{
-        content: "\f0dd";
-        font-family: 'icomoon';
-        position: absolute;
-        top: -22px;
-        right: -5px;
-        font-size: 15px;
-        color: #444444;
-      }
-    }
-  }
-  .jq-selectbox__dropdown{
-    border: 1px solid #dcdcdc;
-    background-color: #f9f9f9;
-    margin: 8px 0 0;
-    top: 32px !important;
-  }
   .jq-file{
     box-shadow: none;
     border-radius: unset;
@@ -2493,9 +2439,156 @@
     }
   }
 }
-
+.jq-selectbox {
+  width: 100%;
+  &__select {
+    height: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    padding: 4px 17px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #707070;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: unset;
+    background: unset;
+    background-color: #f9f9f9;
+    &-text {
+      width: 95%;
+    }
+  }
+  li {
+    padding: 6px 15px 6px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #444444;
+  }
+  li.selected {
+    color: #fff;
+  }
+}
+.jq-selectbox__trigger {
+  border-left: unset;
+  top: 3px;
+  &-arrow {
+    position: relative;
+    right: 0;
+    &::before {
+      content: "\f0dd";
+      font-family: 'icomoon';
+      position: absolute;
+      top: -22px;
+      right: -5px;
+      font-size: 15px;
+      color: #444444;
+    }
+  }
+}
+.jq-selectbox__dropdown {
+  border: 1px solid #dcdcdc;
+  background-color: #f9f9f9;
+  margin: 8px 0 0;
+  top: 32px !important;
+}
 // end upload
 
+// start withdrawals
+.withdrawals__inner{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.withdrawals__col{
+  max-width: 570px;
+  width: 100%;
+}
+.withdrawals__box{
+  background-color: #fff;
+  border: 1px solid #dedede;
+  &-title{
+    height: 65px;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 24px;
+    padding: 17px 32px;
+  }
+}
+.withdrawals__box-content{
+  padding: 30px 40px 50px 38px;
+  button{
+    width: 200px;
+    height: 52px;
+    border: none;
+    background-color: $green;
+    color: #fff;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+.withdrawals-line{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  label{
+    font-size: 16px;
+    margin-bottom: 20px;
+    span{
+      font-family: 'Roboto-Regular', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: $green;
+    }
+  }
+  input {
+    height: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px 17px;
+    outline: none;
+    font-size: 15px;
+    color: #263238;
+  }
+}
+.withdrawals__hisroty{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #444444;
+  height: 42px;
+  padding: 14px 20px;
+  &:nth-child(odd){
+    background-color: #f9f9f9;
+  }
+  &-mail{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+  }
+  &-cash{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+
+  }
+  &-confirmation{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+  }
+  .withdrawals__hisroty-confirmation.pending {
+    color: #444444;
+  }
+  .withdrawals__hisroty-confirmation.paid {
+    color: $green;
+    margin-right: 24px;
+  }
+}
+
+
+
+// end withdrawals
 
 
 
