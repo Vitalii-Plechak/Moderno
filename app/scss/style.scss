@@ -1500,25 +1500,16 @@
   height: 60px;
   text-align: center;
   color: #70838d;
-  position: relative;
   cursor: pointer;
   border: 1px solid #dfdfdf;
   & + .tab{
-    border-left: 1px solid #d7d7d7;
+    border-left: none;
   }
   &.active{
     color: $main;
     font-family: 'Roboto-Medium', sans-serif;
     font-weight: 500;
-  }
-  &.active::before{
-    content: '';
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: $green;
-    bottom: 0;
-    left: 0;
+    border-bottom: 3px solid $green;
   }
 }
 .tab_content{
@@ -1985,44 +1976,33 @@
   .tabs{
     max-width: 270px;
     width: 100%;
-    border-bottom: none;
     display: block;
     text-align-last: left;
     span{
       display: block;
       background-color: #fff;
       padding: 14px 15px 14px 50px;
+      width: 270px;
+      border: 1px solid #dfdfdf;
+      & + span{
+        border-top: none;
+      }
       &::before{
         left: 23px;
         color: #444444;
       }
-    }
-    .tab{
-      width: 270px;
-    }
-    .tab.active::before{
-      left: 0;
-    }
-    .tab.active::after{
-      content: "\f105";
-      font-family: 'icomoon';
-      position: absolute;
-      left: 23px;
-      color: $green;
-      font-size: 14px;
-    }
-    .tab{
-      & + .tab{
-        border-bottom: none;
+      &.active::before{
+        left: 23px;
+        color: $green;
       }
     }
-    .tab.active{
-      border-bottom: none;
+    .active {
+      border-bottom: 3px solid $green;
     }
   }
   .tab__content {
     width: 100%;
-    max-width: 868px;
+    max-width: 870px;
     margin-left: 30px;
     .tab-item__box {
       background-color: #fff;
@@ -2086,6 +2066,228 @@
  
 // end settings
 
+// start profile-details
+.profile__inner{
+  display: flex;
+  margin-bottom: 30px;
+}
+.profile__content{
+  width: 100%;
+}
+.profile__aside{
+  max-width: 270px;
+  width: 100%;
+  margin-right: 30px;
+  .footer__follow-social{
+    margin-bottom: 30px;
+  }
+  .profile-status{
+    padding: 8px 8px 8px 27px;
+    position: relative;
+    border: 1px solid #d3d3d3;
+    &::before{
+      content:'';
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+  }
+  .profile-on{
+    &::before{
+      background-color: $green;
+    }
+  }
+  .profile-off{
+    &::before{
+      background-color: $red;
+    }
+  }
+  .footer__follow-social{
+    margin-left: 5px;
+  }
+}
+.profile__aside-btn{
+  margin-bottom: 30px;
+  a,
+  button{
+    color: #fff;
+    max-width: 270px;
+    width: 100%;
+    min-height: 54px;
+    padding: 18px 15px;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+  }
+  a, button + a, button{
+    margin-bottom: 13px;
+  }
+  .profile__aside-message{
+    background-color: $text;
+    position: relative;
+    &::before{
+      content: "\f003";
+      font-family: 'icomoon';
+      position: absolute;
+      left: 57px;
+      font-size: 16px;
+    }
+  }
+  .profile__aside-following{
+    background-color: $green;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+  }
+}
+.profile__banner{
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 30px;
+  &-images{
+    min-height: 332px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+.profile__items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  max-width: 217px;
+  width: 100%;
+  height: 80px;
+  padding: 25px 25px;
+  border: 1px solid #dfdfdf;
+  font-size: 14px;
+  line-height: 20px;
+  & + .profile__item{
+    border-left: none;
+  }
+  &-content{
+    color: #707070;
+    span{
+      color: #000;
+    }
+  }
+}
+
+.profile-settings{
+  .tabs{
+    span{
+      font-family: 'Roboto-Medium',sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #707070;
+      position: relative;
+      &::before{
+         position: absolute;
+         color: #d0d0d0 !important;
+      }
+      &.active::before{
+        color: $green !important;
+      }
+    }
+    .active {
+      color: $main;
+    }
+    .tab-user{
+      &::before{
+        content: "\f007";
+        font-family: 'icomoon';
+      }
+    }
+    .tab-suitcase{
+      &::before{
+        content: "\f0f2";
+        font-family: 'icomoon';
+      }
+    }
+    .tab-envelope{
+      &::before{
+        content: "\f003";
+        font-family: 'icomoon';
+      }
+    }
+    .tab-comments{
+      &::before{
+        content: "\f0e6";
+        font-family: 'icomoon';
+      }
+    }
+    .tab-group{
+      &::before{
+        content: "\f0c0";
+        font-family: 'icomoon';
+      }
+    }
+  }
+}
+
+.presonal__box {
+  background-color: #fff;
+  padding: 35px 40px 25px;
+  border: 1px solid #ddd;
+  width: 870px;
+  &-title{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: $main;
+  }
+  &-text{
+    margin-bottom: 20px;
+    p{
+      font-size: 15px;
+      line-height: 24px;
+      color: #707070;
+      text-align: justify;
+    }
+  }
+}
+.presonal__box-skills{
+  &-head{
+    display: flex;
+    justify-content: space-between;
+    line-height: 24px;
+  }
+  &-name{
+    font-style: italic;
+  }
+  &-number{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+  }
+  &-line{
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    span{
+      display: block;
+      border-radius: 3px;
+      height: 15px;
+      background-image: url(../images/icons/pro-bar.jpg);
+      background-repeat: repeat;
+
+    }
+  }
+}
+
+// end profile-details
 
 
 
