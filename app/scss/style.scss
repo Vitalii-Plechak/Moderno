@@ -1559,6 +1559,8 @@
   &__info{
     padding: 10px 22px 5px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   &__name{
     line-height: 21px;
@@ -1570,6 +1572,7 @@
     color: $green;
     line-height: 18px;
     padding-bottom: 5px;
+    max-width: fit-content;
   }
   &__price{
     font-family: 'Roboto-Bold', sans-serif;
@@ -1592,6 +1595,12 @@
     font-size: 22px;
     line-height: 40px;
     color: $red;
+  }
+  .jq-selectbox__trigger-arrow{
+    right: -12px;
+    &::before{
+      color: $green;
+    }
   }
 }
 .product-price{
@@ -1895,6 +1904,9 @@
       top: 42px;
     }
   }
+  &-email{
+    color: #546e7a;
+  }
   &-location,
   &-phone,
   &-email{
@@ -1961,6 +1973,8 @@
       line-height: 24px;
       padding: 15px 15px;
       text-align: center;
+      cursor: pointer;
+      outline: none;
     }
   }
 }
@@ -2439,7 +2453,7 @@
     }
   }
 }
-.jq-selectbox {
+.jq-selectbox{
   width: 100%;
   &__select {
     height: 40px;
@@ -2469,6 +2483,9 @@
   li.selected {
     color: #fff;
   }
+}
+.jq-selectbox:hover .jq-selectbox__trigger-arrow{
+  border-top-color: unset;
 }
 .jq-selectbox__trigger {
   border-left: unset;
@@ -2526,6 +2543,8 @@
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
     font-size: 16px;
+    cursor: pointer;
+    outline: none;
   }
 }
 .withdrawals-line{
