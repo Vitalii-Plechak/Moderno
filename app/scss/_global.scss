@@ -1,0 +1,164 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: $text;
+}
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: initial;
+    color: $main;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+.page-content{
+    background-color: $gray;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+@media(max-width: 720px){
+    .container-fluid {
+        padding: 0 15px;
+    }
+}
+
+.title{
+    text-align: center;
+    color: $main;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.rate-star{
+    display: inline-block;
+}
+
+.footer-col{
+    color: #b7c3c8;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    a{
+        color: #b7c3c8;
+    }
+}
+
+.breadcrumbs{
+    &__inner{
+        padding: 37px 0 30px;
+    }
+    &__list{
+        li{
+            display: inline-block;
+            position: relative;
+            font-family: 'Roboto-Regular', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 40px;
+            & + li{
+                padding-left: 24px;
+                &::before {
+                    content: '-';
+                    position: absolute;
+                    left: 8px;
+                    color: $green;
+                }
+            }
+            &:last-child{
+                a,
+                span{
+                    color: $main;
+                }
+            }
+        }
+        a{
+            color: $description;
+        }
+    }
+}
+.angle-right{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+        content: "\f105";
+        font-family: 'icomoon';
+        position: absolute;
+        color: $green;
+        left: 0;
+        font-size: 14px;
+    }
+}
+
+.page-404,
+.about-us,
+.contact-us,
+.tab-item__box{
+    &__inner {
+        padding-top: 50px;
+        padding-bottom: 100px;
+        border: 1px solid #dcdcdc;
+        margin-bottom: 150px;
+    }
+    &__head,
+    &-head{
+        background-color: #fff;
+        font-size: 24px;
+        color: $main;
+        height: 70px;
+        padding: 21px 30px;
+        border: 1px solid #dcdcdc;
+        border-bottom: none;
+    }
+    
+}
